@@ -8,6 +8,7 @@ public class homework30May01 {
                 if (j != i) {
                     for (int k = 0; k < numbers.length; k++) {
                         if (k != i && k != j) {
+                           
                             System.out.println(numbers[i] + " " + numbers[j] + " " + numbers[k]);
                         }
                     }
