@@ -1,3 +1,5 @@
+package Demo;
+
 import java.util.Scanner;
 
 public class homework30May03 {
