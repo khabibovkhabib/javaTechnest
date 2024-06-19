@@ -1,4 +1,4 @@
-package Demo;
+package Demo.homeworksMay;
 
 import java.util.Scanner;
 
