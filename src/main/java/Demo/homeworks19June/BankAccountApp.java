@@ -24,8 +24,13 @@ public class BankAccountApp {
     public static double increaseBalance(double balance, Scanner sc) {
         System.out.println("Zəhmət olmazsa artırmaq istədiyiniz məbləği daxil edin:");
         double increaseAmount = sc.nextDouble();
-        balance += increaseAmount;
-        return balance;
+        if (increaseAmount+balance<=500){
+            balance += increaseAmount;
+            return balance;
+        }else {
+            System.out.println("Balas 500 manatdan artıq ola bilməz");
+            return balance;
+        }
     }
     public static double reduceBalance(double balance, Scanner sc) {
         System.out.println("Zəhmət olmazsa ödəniş məbləğini daxil edin:");
