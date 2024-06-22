@@ -19,6 +19,7 @@ public class BankAccountApp {
         sc.close();
     }
     public static double getBalance(double balance) {
+
         return balance;
     }
     public static double increaseBalance(double balance, Scanner sc) {
