@@ -6,12 +6,6 @@ public class BankAccountApp {
     private double balance;
     private boolean accountActivity;
 
-    public BankAccountApp(int accountNumber, String customerName, double balance, boolean accountActivity) {
-        this.accountNumber = accountNumber;
-        this.customerName = customerName;
-        this.balance = balance;
-        this.accountActivity = accountActivity;
-    }
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -45,10 +39,10 @@ public class BankAccountApp {
     }
 
     public void increaseBalance(double amount) {
-        if ( amount <= 500) {
+        if (amount <= 500) {
             this.balance += amount;
         } else {
-            System.out.println("Balans 500 manatdan artıq artırıla bilməz");
+            System.out.println("Balans 500 manatdan çox artırıla bilməz");
         }
     }
 
