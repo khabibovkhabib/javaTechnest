@@ -1,47 +1,56 @@
 package Demo.homeworks19June;
 
-import java.util.Scanner;
-
 public class BankAccountApp {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int accountNumber = 0;
-        String customerName;
-        double balance = 0;
-        boolean accountActivity = true;
+    private int accountNumber;
+    private String customerName;
+    private double balance;
+    private boolean accountActivity;
 
-        balance = increaseBalance(balance, sc);
-        System.out.println("Balans: " + getBalance(balance));
-
-        balance = reduceBalance(balance, sc);
-        System.out.println("Balans: " + getBalance(balance));
-
-        sc.close();
+    public int getAccountNumber() {
+        return accountNumber;
     }
-    public static double getBalance(double balance) {
 
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public double getBalance() {
         return balance;
     }
-    public static double increaseBalance(double balance, Scanner sc) {
-        System.out.println("Zəhmət olmazsa artırmaq istədiyiniz məbləği daxil edin:");
-        double increaseAmount = sc.nextDouble();
-        if (increaseAmount+balance<=500){
-            balance += increaseAmount;
-            return balance;
-        }else {
-            System.out.println("Balas 500 manatdan artıq ola bilməz");
-            return balance;
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public boolean isAccountActivity() {
+        return accountActivity;
+    }
+
+    public void setAccountActivity(boolean accountActivity) {
+        this.accountActivity = accountActivity;
+    }
+
+    public void increaseBalance(double amount) {
+        if (amount <= 500) {
+            this.balance += amount;
+        } else {
+            System.out.println("Balans 500 manatdan çox artırıla bilməz");
         }
     }
-    public static double reduceBalance(double balance, Scanner sc) {
-        System.out.println("Zəhmət olmazsa ödəniş məbləğini daxil edin:");
-        double reduceAmount = sc.nextDouble();
-        if (balance >= reduceAmount) {
-            balance -= reduceAmount;
-            return balance;
+
+    public void reduceBalance(double amount) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
         } else {
             System.out.println("Balansınızda kifayət qədər məbləğ yoxdur!");
-            return balance;
         }
     }
 }
